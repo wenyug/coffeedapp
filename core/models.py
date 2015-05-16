@@ -18,7 +18,7 @@ class Location(models.Model):
     description = models.TextField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
     hours = models.TextField(null=True, blank=True)
-    image_file = models.FileField(upload_to=upload_to_location, null=True, blank=True)
+    image_file = models.ImageField(upload_to=upload_to_location, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):

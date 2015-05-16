@@ -1,0 +1,4 @@
+Changed FileField back to ImageField
+Trying this again 
+installed gunicorn
+added buildpack URL

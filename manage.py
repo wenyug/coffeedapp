@@ -1,3 +1,4 @@
+web: gunicorn coffeedapp.wsgi --log-file -
 #!/usr/bin/env python
 import os
 import sys
