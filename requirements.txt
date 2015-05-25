@@ -9,6 +9,7 @@ django-etc==0.7.0
 django-geoposition==0.2.2
 django-sitegate==0.10.0
 django-storages==1.1.8
+django-widget-tweaks==1.3
 djangoaddattr==0.0.1
 gunicorn==19.3.0
 heroku==0.1.4
