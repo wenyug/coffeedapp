@@ -17,29 +17,29 @@ RATING_CHOICES = (
     )
 
 YESNO_CHOICES = (
- (0, 'No'),
- (1, 'Yes')
+ (0, 'First Summer'),
+ (1, '1-3 years'),
+ (2, '3-5 years'),
+ (3, '5 + years'),
  )
 
 PLURAL_CHOICES = (
- (0, 'None'),
- (1, 'Minimal'),
- (2, 'Some'),
- (3, 'Ample')
+ (0, '$.75-$1.00/min'),
+ (1, '$1.00-$1.25/min'),
+ (2, '$1.25-$1.50/min'),
+ (3, '$1.50-$1.75/min'),
+ (4, '$1.75+/min')
  )
 
 WIFI_CHOICES = (
- (0, 'None'),
- (1, 'Spotty'),
- (2, 'Strong')
+ (0, 'Yes'),
+ (1, 'No'),
  )
 
 COFFEE_CHOICES = (
- (0, 'None'),
- (1, 'Truck Stop'),
- (2, 'Good'),
- (3, 'Really Good'),
- (4, 'Great'),
+ (0, 'Today'),
+ (1, 'Next 3 Days'),
+ (2, 'Next Week'),
  )
 
 # Create your models here.
@@ -58,14 +58,14 @@ class Location(models.Model):
     position = GeopositionField(null=True, blank=True)
     hours = models.TextField(null=True, blank=True)
     image_file = models.ImageField(upload_to=upload_to_location, null=True, blank=True)
-    wifi = models.IntegerField(choices=WIFI_CHOICES, null=True, blank=True)
-    seating = models.IntegerField(choices=PLURAL_CHOICES, null=True, blank=True)
-    outlets = models.IntegerField(choices=PLURAL_CHOICES, null=True, blank=True)
-    bathrooms = models.IntegerField(choices=YESNO_CHOICES, null=True, blank=True)
-    coffee = models.IntegerField(choices=COFFEE_CHOICES, null=True, blank=True)
-    alcohol = models.IntegerField(choices=YESNO_CHOICES, null=True, blank=True)
-    outdoor = models.IntegerField(choices=PLURAL_CHOICES, null=True, blank=True)
-    food = models.IntegerField(choices=COFFEE_CHOICES, null=True, blank=True)
+    Mow = models.IntegerField(choices=WIFI_CHOICES, null=True, blank=True)
+    Trim = models.IntegerField(choices=WIFI_CHOICES, null=True, blank=True)
+    Edge = models.IntegerField(choices=WIFI_CHOICES, null=True, blank=True)
+    Scoop_Poop = models.IntegerField(choices=WIFI_CHOICES, null=True, blank=True)
+    Responsiveness = models.IntegerField(choices=COFFEE_CHOICES, null=True, blank=True)
+    Experience = models.IntegerField(choices=YESNO_CHOICES, null=True, blank=True)
+    Custom_Patterns = models.IntegerField(choices=WIFI_CHOICES, null=True, blank=True)
+    Rate = models.IntegerField(choices=PLURAL_CHOICES, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
