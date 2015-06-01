@@ -105,7 +105,7 @@ if ON_HEROKU == True:
 
     import dj_database_url
 
-    DATABASES['default'] = dj_database_url.config()
+    DATABASES = {'default': dj_database_url.config(default='postgres://lihjtbfjyftioq:kuJU109RtKnIH3lG_m4VmafW4h@ec2-54-204-35-248.compute-1.amazonaws.com:5432/d8glciidiajq31')}
 
 else: 
 
