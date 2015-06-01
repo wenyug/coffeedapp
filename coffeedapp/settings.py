@@ -98,7 +98,7 @@ ON_HEROKU = os.environ.get('ON_HEROKU')
 
 
 
-if ON_HEROKU == '1':
+if ON_HEROKU == True:
 
     # Parse database configuration from $DATABASE_URL
 
