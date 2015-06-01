@@ -54,6 +54,7 @@ INSTALLED_APPS = (
     'geoposition',
     'bootstrap_pagination',
     'widget_tweaks',
+    'dj_database_url',
 )
 
 MIDDLEWARE_CLASSES = (
