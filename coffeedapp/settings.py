@@ -101,24 +101,19 @@ ON_HEROKU = os.environ.get('ON_HEROKU')
 
 if ON_HEROKU == True:
 
-    # Parse database configuration from $DATABASE_URL
+    DEBUG = False
 
     import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
+else:
 
-    DATABASES = {'default': dj_database_url.config(default='postgres://lihjtbfjyftioq:kuJU109RtKnIH3lG_m4VmafW4h@ec2-54-204-35-248.compute-1.amazonaws.com:5432/d8glciidiajq31')}
-
-else: 
+    DEBUG = True
 
     DATABASES = {
-
         'default': {
-
             'ENGINE': 'django.db.backends.sqlite3',
-
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
         }
-
     }
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
