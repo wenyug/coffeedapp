@@ -100,7 +100,7 @@ def contactview(request):
                         return HttpResponse('Invalid header found.')
                 return HttpResponseRedirect('/contact/thankyou/')
         else:
-            return render_to_response('base/form.html', {'form': ContactForm()})
+            return render_to_response('base/form.html', {'form': ContactForm()},RequestContext(request))
     
         return render_to_response('base/form.html', {'form': ContactForm()},
             RequestContext(request))
