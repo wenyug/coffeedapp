@@ -23,7 +23,7 @@ MAIN_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '-b73=z=56+vzu2jl_ewatm1#7t*gl#phlx8c83amjusr$f5^ki'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -34,7 +34,8 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
 "django.core.context_processors.static",
 "django.core.context_processors.tz",
 "django.contrib.messages.context_processors.messages",
-"django.core.context_processors.request"
+"django.core.context_processors.request",
+"django.core.context_processors.csrf"
 )
 
 

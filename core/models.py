@@ -3,6 +3,9 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.db.models import Avg
 from geoposition.fields import GeopositionField
+from django import forms
+from django.forms.widgets import *
+from django.core.mail import send_mail, BadHeaderError
 
 import os
 import uuid
@@ -92,5 +95,12 @@ class Review(models.Model):
     rating = models.IntegerField(choices=RATING_CHOICES, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+
+# A simple contact form with four fields.
+class ContactForm(forms.Form):
+    name = forms.CharField()
+    email = forms.EmailField()
+    topic = forms.CharField()
+    message = forms.CharField(widget=Textarea())
 
 
