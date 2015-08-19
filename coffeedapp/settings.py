@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/s
 """
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -56,6 +58,7 @@ INSTALLED_APPS = (
     'bootstrap_pagination',
     'widget_tweaks',
     'dj_database_url',
+    'yagmail',
 )
 
 MIDDLEWARE_CLASSES = (
